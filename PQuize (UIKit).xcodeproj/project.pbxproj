@@ -88,9 +88,9 @@
 		9FE1E46529055D8200E6FEBB /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9FE1E46829055DC000E6FEBB /* WelcomeViewController.swift */,
 				9FE1E46629055DC000E6FEBB /* QuestionsViewController.swift */,
 				9FE1E46729055DC000E6FEBB /* ResultViewController.swift */,
-				9FE1E46829055DC000E6FEBB /* WelcomeViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";

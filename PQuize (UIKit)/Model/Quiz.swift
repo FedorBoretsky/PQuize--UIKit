@@ -7,6 +7,8 @@
 
 import Foundation
 
+var quiz = Quiz()
+
 struct Quiz {
     
     // MARK: - Content of the Quiz.

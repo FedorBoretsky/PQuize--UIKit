@@ -40,50 +40,19 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🐶" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PlA-Ud-BZV">
-                                <rect key="frame" x="20" y="68" width="45" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🐰" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fp-dr-M9a">
-                                <rect key="frame" x="20" y="794" width="45" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🐈" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQU-du-nCT">
-                                <rect key="frame" x="349" y="68" width="45" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🐢" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9kj-hO-7aM">
-                                <rect key="frame" x="349" y="794" width="45" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9kj-hO-7aM" secondAttribute="trailing" constant="20" id="5oA-pm-zbo"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9kj-hO-7aM" secondAttribute="bottom" constant="20" id="6bk-6G-jhn"/>
                             <constraint firstItem="duP-Qm-gGI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="8pz-tQ-JFe"/>
-                            <constraint firstItem="3fp-dr-M9a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="CCg-vA-bPq"/>
-                            <constraint firstItem="MQU-du-nCT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="CFF-UH-F9V"/>
-                            <constraint firstItem="9kj-hO-7aM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3fp-dr-M9a" secondAttribute="trailing" constant="20" id="DIS-rg-PfL"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3fp-dr-M9a" secondAttribute="bottom" constant="20" id="FWR-H3-TEg"/>
-                            <constraint firstItem="MQU-du-nCT" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="PlA-Ud-BZV" secondAttribute="trailing" constant="20" id="PDU-8T-Yle"/>
                             <constraint firstItem="duP-Qm-gGI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ZrA-Hb-Xeb"/>
-                            <constraint firstItem="PlA-Ud-BZV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="aqH-Rp-Hl7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="duP-Qm-gGI" secondAttribute="trailing" constant="20" id="hcS-f5-bJb"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MQU-du-nCT" secondAttribute="trailing" constant="20" id="rZe-WO-zXZ"/>
                             <constraint firstItem="duP-Qm-gGI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="s7c-Ka-gmM"/>
-                            <constraint firstItem="PlA-Ud-BZV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="sSK-91-J9o"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="startTitle" destination="f7p-yQ-uuD" id="xWk-Xo-yaf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
