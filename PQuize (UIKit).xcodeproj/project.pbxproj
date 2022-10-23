@@ -75,10 +75,10 @@
 				9F54604429055A5900DC99A4 /* AppDelegate.swift */,
 				9F54604629055A5900DC99A4 /* SceneDelegate.swift */,
 				9F54604829055A5900DC99A4 /* ViewController.swift */,
-				9F54605829055B3F00DC99A4 /* Main.storyboard */,
 				9FE1E46C29055E0F00E6FEBB /* Model */,
 				9FE1E46529055D8200E6FEBB /* View Controllers */,
 				9F54604D29055A5A00DC99A4 /* Assets.xcassets */,
+				9F54605829055B3F00DC99A4 /* Main.storyboard */,
 				9F54604F29055A5A00DC99A4 /* LaunchScreen.storyboard */,
 				9F54605229055A5A00DC99A4 /* Info.plist */,
 			);
