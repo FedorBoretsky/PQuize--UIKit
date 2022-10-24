@@ -32,6 +32,14 @@ struct Quiz {
                     Answer(text: "Много-", votes: [.bishop]),
                     Answer(text: "Много", votes: [.queen]),
                  ]),
+        Question(text: "SEGMENTED TEST QUESTION?",
+                 responseType: .segmentedChoice,
+                 answers: [
+                    Answer(text: "Мало", votes: [.king]),
+                    Answer(text: "Мало+", votes: [.pawn]),
+                    Answer(text: "Много-", votes: [.bishop]),
+                    Answer(text: "Много", votes: [.queen]),
+                 ]),
         Question(text: "Из-за вашей фигуры вы не можете ходить:",
                  responseType: .multipleChoice,
                  answers: [

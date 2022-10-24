@@ -121,10 +121,24 @@ class QuestionsViewController: UIViewController
     }
     
     func showSegmentedChoice() {
+        
+        // Show form.
         segmentedChoiceForm.isHidden = false
+        
+        // Show actual labels.
         segmentedStartLabel.text = currentAnswers.first?.text
         segmentedFinishLabel.text = currentAnswers.last?.text
         // TODO: Implement showSegmentedChoice().
+        
+        // Show actual answers.
+        segmentedControl.removeAllSegments()
+        currentAnswers.forEach { _ in
+            segmentedControl.insertSegment(withTitle: nil, at: 0, animated: false)
+        }
+        
+        // Select actual answer.
+        let answerIndexFromQuize = currentAnswers.firstIndex { $0.isSelected }
+        segmentedControl.selectedSegmentIndex = answerIndexFromQuize ?? 0
 
     }
     
@@ -162,7 +176,8 @@ class QuestionsViewController: UIViewController
     }
 
     func saveSegmentedResponse() {
-        
+        let answerIndex = segmentedControl.selectedSegmentIndex
+        quiz.selectAnswer(questionIndex: currentQuestionIndex, answerIndex: answerIndex)
     }
     
     // MARK: - Interactions
@@ -175,6 +190,18 @@ class QuestionsViewController: UIViewController
         case .segmentedChoice:  saveSegmentedResponse()
         }
         currentQuestionIndex += 1
+        // TODO: - Delete PRINT
+        print("\n\n\n===== QUIZE STATE ======\n")
+        for question in quiz.questions {
+            print(question.text)
+            for answer in question.answers {
+                if answer.isSelected {
+                    let votes = answer.votes.map { $0.name }.joined(separator: ", ")
+                    print("    \(answer.text): \(answer.isSelected ? votes : "")")
+                }
+            }
+        }
+        print("\nResult: \(quiz.finishTitle)")
     }
     
     @IBSegueAction func gotoResultAction(_ coder: NSCoder) -> ResultViewController? {
