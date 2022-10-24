@@ -90,12 +90,17 @@ class QuestionsViewController: UIViewController
     }
     
     func showSingleChoice() {
+        
+        // Show forms.
         singleChoiceForm.isHidden = false
+        
+        // Show answers.
         singleChoiceItems.forEach{ $0.isHidden = true }
         zip(singleChoiceItems, currentAnswers).forEach{
             (button, answer)
             in
             button.setTitle(answer.text, for: [])
+            button.isSelected = answer.isSelected
             button.isHidden = false
         }
     }
