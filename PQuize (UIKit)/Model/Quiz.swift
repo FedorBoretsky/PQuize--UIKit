@@ -16,7 +16,7 @@ struct Quiz {
     let startTitle = "Какая у меня фигура, тренер?"
     
     var questions: [Question] = [
-        Question(text: "TEST QUESTION (REANGE)?",
+        Question(text: "TEST QUESTION (RANGE)?",
                  responseType: .rangeChoice,
                  answers: [
                     Answer(text: "Мало", votes: [.king]),
