@@ -16,14 +16,14 @@ struct Quiz {
     let startTitle = "Какая у меня фигура, тренер?"
     
     var questions: [Question] = [
-        Question(text: "TEST QUESTION (RANGE)?",
-                 responseType: .rangeChoice,
-                 answers: [
-                    Answer(text: "Мало", votes: [.king]),
-                    Answer(text: "Мало+", votes: [.pawn]),
-                    Answer(text: "Много-", votes: [.bishop]),
-                    Answer(text: "Много", votes: [.queen]),
-                 ]),
+//        Question(text: "TEST QUESTION (RANGE)?",
+//                 responseType: .rangeChoice,
+//                 answers: [
+//                    Answer(text: "Мало", votes: [.king]),
+//                    Answer(text: "Мало+", votes: [.pawn]),
+//                    Answer(text: "Много-", votes: [.bishop]),
+//                    Answer(text: "Много", votes: [.queen], isSelected: true),
+//                 ]),
 
         Question(text: "Много ли вы едите?",
                  responseType: .singleChoice,
@@ -88,7 +88,7 @@ struct Quiz {
         
         // Clear previous choice if only one answer is possible.
         switch questions[questionIndex].responseType {
-        case .segmentedChoice, .rangeChoice, .singleChoice:
+        case .segmentedChoice, .singleChoice:
             deselectAnswersInQuestion(questionIndex: questionIndex)
         case .multipleChoice:
             break

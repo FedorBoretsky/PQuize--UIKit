@@ -84,8 +84,6 @@ class QuestionsViewController: UIViewController
             showSingleChoice()
         case .multipleChoice:
             showMultipleChoice()
-        case .rangeChoice:
-            showRangeChoice()
         case .segmentedChoice:
             showSegmentedChoice()
         }
@@ -114,12 +112,6 @@ class QuestionsViewController: UIViewController
         }
     }
     
-    func showRangeChoice() {
-        rangeChoiceForm.isHidden = false
-        rangeStartLabel.text = currentAnswers.first?.text
-        rangeFinishLabel.text = currentAnswers.last?.text
-    }
-    
     func showSegmentedChoice() {
         
         // Show form.
@@ -130,7 +122,7 @@ class QuestionsViewController: UIViewController
         segmentedFinishLabel.text = currentAnswers.last?.text
         // TODO: Implement showSegmentedChoice().
         
-        // Show actual answers.
+        // Show segments for answers.
         segmentedControl.removeAllSegments()
         currentAnswers.forEach { _ in
             segmentedControl.insertSegment(withTitle: nil, at: 0, animated: false)
@@ -167,14 +159,6 @@ class QuestionsViewController: UIViewController
         
     }
     
-    func saveRangeResponse() {
-        let range = rangeSlider.maximumValue - rangeSlider.minimumValue
-        let stepLentgh = range / Float(currentAnswers.count)
-        let stepsInValue = Int( (rangeSlider.value / stepLentgh).rounded(.towardZero) )
-        let answerIndex = min(stepsInValue, currentAnswers.count - 1)
-        quiz.selectAnswer(questionIndex: currentQuestionIndex, answerIndex: answerIndex)
-    }
-
     func saveSegmentedResponse() {
         let answerIndex = segmentedControl.selectedSegmentIndex
         quiz.selectAnswer(questionIndex: currentQuestionIndex, answerIndex: answerIndex)
@@ -186,7 +170,6 @@ class QuestionsViewController: UIViewController
         switch currentQuestion.responseType {
         case .singleChoice:     saveSingleChoiceResponse()
         case .multipleChoice:   saveMultipleChoiceResponse()
-        case .rangeChoice:      saveRangeResponse()
         case .segmentedChoice:  saveSegmentedResponse()
         }
         currentQuestionIndex += 1
