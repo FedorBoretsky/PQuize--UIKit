@@ -53,7 +53,7 @@ struct Quiz {
                  responseType: .multipleChoice,
                  answers: [
                     Answer(text: "Прямо", votes: [.bishop]),
-                    Answer(text: "Назад", votes: [.pawn]),
+                    Answer(text: "Назад", votes: [.pawn, .bishop]),
                     Answer(text: "Вбок", votes: [.bishop]),
                     Answer(text: "Далеко", votes: [.king, .pawn]),
                  ]),
@@ -87,7 +87,28 @@ struct Quiz {
     // MARK: - Service
     
     private var calculatedResult: Piece? {
-        return nil
+//        var candidates: [Piece: Int] = []
+        
+//        for question in questions {
+//            for answer in question.answers {
+//                if answer
+//            }
+//        }
+        
+        var candidates: [Piece: Int]
+        candidates = questions.reduce([:]) { partialResult, question in
+            question.answers.reduce(into: partialResult) { partialResult, answer in
+                if answer.isSelected {
+                    answer.votes.forEach { piece in
+                        partialResult[piece, default: 0] += 1
+                    }
+                }
+            }
+        }
+        
+        let sortedCandidates = candidates.sorted { $0.value > $1.value }
+        
+        return sortedCandidates.first?.key
     }
     
     // MARK: - Intents.
