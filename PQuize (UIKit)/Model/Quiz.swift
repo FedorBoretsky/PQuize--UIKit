@@ -16,16 +16,16 @@ struct Quiz {
     let startTitle = "Какая у меня фигура, тренер?"
     
     var questions: [Question] = [
-        Question(text: "TEST QUESTION (SINGLE CHOICE)?",
-                 responseType: .singleChoice,
+        Question(text: "TEST QUESTION (MULTIPLE CHOICE)?",
+                 responseType: .multipleChoice,
                  answers: [
                     Answer(text: "11", votes: [.king]),
                     Answer(text: "22", votes: [.pawn]),
                     Answer(text: "33", votes: [.bishop]),
                     Answer(text: "44", votes: [.queen], isSelected: true),
                  ]),
-        Question(text: "REPEAT TEST QUESTION (SINGLE CHOICE)?",
-                 responseType: .singleChoice,
+        Question(text: "REPEAT TEST QUESTION (MULTIPLE CHOICE)?",
+                 responseType: .multipleChoice,
                  answers: [
                     Answer(text: "11 11", votes: [.king], isSelected: true),
                     Answer(text: "22 22", votes: [.pawn]),
@@ -44,7 +44,7 @@ struct Quiz {
         Question(text: "Много ли вы двигаетесь?",
                  responseType: .segmentedChoice,
                  answers: [
-                    Answer(text: "Мало", votes: [.king]),
+                    Answer(text: "Мало", votes: [.king, .pawn]),
                     Answer(text: "Мало+", votes: [.pawn]),
                     Answer(text: "Много-", votes: [.bishop]),
                     Answer(text: "Много", votes: [.queen]),

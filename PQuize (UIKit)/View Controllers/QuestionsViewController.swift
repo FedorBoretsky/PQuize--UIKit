@@ -97,8 +97,7 @@ class QuestionsViewController: UIViewController
         // Show answers.
         singleChoiceItems.forEach{ $0.isHidden = true }
         zip(singleChoiceItems, currentAnswers).forEach{
-            (button, answer)
-            in
+            (button, answer) in
             button.setTitle(answer.text, for: [])
             button.isSelected = answer.isSelected
             button.isHidden = false
@@ -106,14 +105,19 @@ class QuestionsViewController: UIViewController
     }
     
     func showMultipleChoice() {
+        
+        // Show forms
         multipleChoiceForm.isHidden = false
+        
+        // Show answers.
         multipleChioceItems.forEach{ $0.isHidden = true }
         zip(multipleChioceItems, currentAnswers).forEach{
-            (chiceItem, answer)
-            in
-            let label = chiceItem.arrangedSubviews.first as! UILabel
+            (chioceItem, answer) in
+            let label = chioceItem.arrangedSubviews.first as! UILabel
+            let uiswitch = chioceItem.arrangedSubviews.last as! UISwitch
             label.text = answer.text
-            chiceItem.isHidden = false
+            uiswitch.isOn = answer.isSelected
+            chioceItem.isHidden = false
         }
     }
     
@@ -136,11 +140,11 @@ class QuestionsViewController: UIViewController
         // Select actual answer.
         let answerIndexFromQuize = currentAnswers.firstIndex { $0.isSelected }
         segmentedControl.selectedSegmentIndex = answerIndexFromQuize ?? 0
-
+        
     }
     
     // MARK: - Save responses
-      
+    
     func saveSingleChoiceResponse() {
         let answerIndex = singleChoiceItems.firstIndex{ $0.isSelected }
         if let answerIndex = answerIndex {
@@ -185,7 +189,7 @@ class QuestionsViewController: UIViewController
             for answer in question.answers {
                 if answer.isSelected {
                     let votes = answer.votes.map { $0.name }.joined(separator: ", ")
-                    print("    \(answer.text): \(answer.isSelected ? votes : "")")
+                    print("    \(answer.text) (\(answer.isSelected ? votes : ""))")
                 }
             }
         }
