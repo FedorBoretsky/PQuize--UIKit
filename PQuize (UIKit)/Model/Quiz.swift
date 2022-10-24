@@ -17,7 +17,7 @@ struct Quiz {
     
     var questions: [Question] = [
         Question(text: "TEST QUESTION (REANGE)?",
-                 responseType: .segmentedChoice,
+                 responseType: .rangeChoice,
                  answers: [
                     Answer(text: "Мало", votes: [.king]),
                     Answer(text: "Мало+", votes: [.pawn]),
@@ -34,14 +34,6 @@ struct Quiz {
                     Answer(text: "Постоянно", votes: [.queen]),
                  ]),
         Question(text: "Много ли вы двигаетесь?",
-                 responseType: .segmentedChoice,
-                 answers: [
-                    Answer(text: "Мало", votes: [.king]),
-                    Answer(text: "Мало+", votes: [.pawn]),
-                    Answer(text: "Много-", votes: [.bishop]),
-                    Answer(text: "Много", votes: [.queen]),
-                 ]),
-        Question(text: "SEGMENTED TEST QUESTION?",
                  responseType: .segmentedChoice,
                  answers: [
                     Answer(text: "Мало", votes: [.king]),
