@@ -98,9 +98,9 @@
 		9FE1E46C29055E0F00E6FEBB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9FE1E46E29055E5D00E6FEBB /* Question.swift */,
 				9FE1E46D29055E5D00E6FEBB /* Answer.swift */,
 				9FE1E47029055E5D00E6FEBB /* Piece.swift */,
-				9FE1E46E29055E5D00E6FEBB /* Question.swift */,
 				9FE1E46F29055E5D00E6FEBB /* Quiz.swift */,
 				9FE1E47129055E5D00E6FEBB /* ResponseType.swift */,
 			);

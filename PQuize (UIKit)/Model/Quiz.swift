@@ -70,6 +70,8 @@ struct Quiz {
     // MARK: - Service
     
     private var calculatedResult: Piece? {
+        
+        // Sum votes for each pieces.
         var candidates: [Piece: Int]
         candidates = questions.reduce([:]) { partialResult, question in
             question.answers.reduce(into: partialResult) { partialResult, answer in
@@ -81,8 +83,8 @@ struct Quiz {
             }
         }
         
+        // Return the piece with maximum votes.
         let sortedCandidates = candidates.sorted { $0.value > $1.value }
-        
         return sortedCandidates.first?.key
     }
     
