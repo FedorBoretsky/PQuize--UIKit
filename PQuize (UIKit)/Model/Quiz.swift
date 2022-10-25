@@ -16,23 +16,6 @@ struct Quiz {
     let startTitle = "Какая у меня фигура, тренер?"
     
     var questions: [Question] = [
-        Question(text: "TEST QUESTION (MULTIPLE CHOICE)?",
-                 responseType: .multipleChoice,
-                 answers: [
-                    Answer(text: "11", votes: [.king]),
-                    Answer(text: "22", votes: [.pawn]),
-                    Answer(text: "33", votes: [.bishop]),
-                    Answer(text: "44", votes: [.queen], isSelected: true),
-                 ]),
-        Question(text: "REPEAT TEST QUESTION (MULTIPLE CHOICE)?",
-                 responseType: .multipleChoice,
-                 answers: [
-                    Answer(text: "11 11", votes: [.king], isSelected: true),
-                    Answer(text: "22 22", votes: [.pawn]),
-                    Answer(text: "33 33", votes: [.bishop]),
-                    Answer(text: "44 44", votes: [.queen]),
-                 ]),
-
         Question(text: "Много ли вы едите?",
                  responseType: .singleChoice,
                  answers: [
@@ -87,14 +70,6 @@ struct Quiz {
     // MARK: - Service
     
     private var calculatedResult: Piece? {
-//        var candidates: [Piece: Int] = []
-        
-//        for question in questions {
-//            for answer in question.answers {
-//                if answer
-//            }
-//        }
-        
         var candidates: [Piece: Int]
         candidates = questions.reduce([:]) { partialResult, question in
             question.answers.reduce(into: partialResult) { partialResult, answer in
