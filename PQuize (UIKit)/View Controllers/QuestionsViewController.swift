@@ -69,9 +69,27 @@ class QuestionsViewController: UIViewController
     func updateUI() {
         
         // Quiz progress bar
-        let progressStep: Float = 1.0 / Float(quiz.questions.count)
-        let currentProgress = Float(currentQuestionIndex) * progressStep + progressStep / 4
-        quizProgressBar.setProgress(currentProgress, animated: true)
+//        let ptWidth = view.bounds.width
+//        let ptMargin: CGFloat = 30
+//        let progressMargin: Float = Float( ptMargin / ptWidth )
+//        let progessArea: Float = 1.0 - 2 * progressMargin
+//        let progressStep: Float = progessArea / Float(quiz.questions.count)
+//        let currentProgress = Float(currentQuestionIndex + 1) * progressStep + progressMargin
+
+        if quiz.questions.count == 1 {
+            let progressStep: Float = 0.5
+            let currentProgress: Float = progressStep * Float(currentQuestionIndex + 1)
+            quizProgressBar.setProgress(currentProgress, animated: true)
+        } else {
+            let progressStep: Float = 1 / Float(quiz.questions.count)
+            var currentProgress = Float(currentQuestionIndex + 1) * progressStep
+            if currentQuestionIndex + 1 == quiz.questions.count {
+                let widthInPt = view.bounds.width
+                let lastQuestionRightMarginInPt: CGFloat = 30
+                currentProgress -= Float( lastQuestionRightMarginInPt / widthInPt )
+            }
+            quizProgressBar.setProgress(currentProgress, animated: true)
+        }
         
         // Number and the text of question.
         self.title = "Вопрос \(currentQuestionIndex + 1) из \(quiz.questions.count)"
