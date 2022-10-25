@@ -93,7 +93,7 @@ struct Quiz {
         // Clear previous choice if only one answer is possible.
         switch questions[questionIndex].responseType {
         case .segmentedChoice, .singleChoice:
-            deselectAnswersInQuestion(questionIndex: questionIndex)
+            deselectAllAnswersInQuestion(questionIndex: questionIndex)
         case .multipleChoice:
             break
         }
@@ -102,7 +102,7 @@ struct Quiz {
         questions[questionIndex].answers[answerIndex].isSelected = true
     }
     
-    mutating func deselectAnswersInQuestion(questionIndex: Int) {
+    mutating func deselectAllAnswersInQuestion(questionIndex: Int) {
         questions[questionIndex].answers.enumerated().forEach { (index, _) in
             questions[questionIndex].answers[index].isSelected = false
         }

@@ -155,7 +155,7 @@ class QuestionsViewController: UIViewController
     func saveMultipleChoiceResponse() {
         
         // Clear previous answers.
-        quiz.deselectAnswersInQuestion(questionIndex: currentQuestionIndex)
+        quiz.deselectAllAnswersInQuestion(questionIndex: currentQuestionIndex)
         
         // Select new answers.
         for (answerIndex, labelWithSwitch) in multipleChioceItems.enumerated() {
