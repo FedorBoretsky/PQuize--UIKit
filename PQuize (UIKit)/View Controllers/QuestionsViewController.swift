@@ -33,6 +33,7 @@ class QuestionsViewController: UIViewController
     @IBOutlet weak var segmentedFinishLabel: UILabel!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
+    @IBOutlet weak var submitQuestionButton: UIButton!
     
     // MARK: - State
     
@@ -69,13 +70,6 @@ class QuestionsViewController: UIViewController
     func updateUI() {
         
         // Quiz progress bar
-//        let ptWidth = view.bounds.width
-//        let ptMargin: CGFloat = 30
-//        let progressMargin: Float = Float( ptMargin / ptWidth )
-//        let progessArea: Float = 1.0 - 2 * progressMargin
-//        let progressStep: Float = progessArea / Float(quiz.questions.count)
-//        let currentProgress = Float(currentQuestionIndex + 1) * progressStep + progressMargin
-
         if quiz.questions.count == 1 {
             let progressStep: Float = 0.5
             let currentProgress: Float = progressStep * Float(currentQuestionIndex + 1)
@@ -104,6 +98,12 @@ class QuestionsViewController: UIViewController
             showMultipleChoice()
         case .segmentedChoice:
             showSegmentedChoice()
+        }
+        
+        // Submit question button.
+        if currentQuestion.responseType == .singleChoice {
+            let isQuestionAnswered = currentAnswers.contains{ $0.isSelected }
+            submitQuestionButton.isEnabled = isQuestionAnswered
         }
     }
     
@@ -208,6 +208,8 @@ class QuestionsViewController: UIViewController
     @IBAction func singleChoiceButtonPressed(_ sender: UIButton) {
         singleChoiceItems.forEach{ $0.isSelected = false}
         sender.isSelected = true
+        saveSingleChoiceResponse()
+        updateUI()
     }
     
 }

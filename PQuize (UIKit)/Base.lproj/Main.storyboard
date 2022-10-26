@@ -309,6 +309,7 @@
                         <outlet property="segmentedFinishLabel" destination="JOj-p7-Dqy" id="8Re-hB-IM3"/>
                         <outlet property="segmentedStartLabel" destination="iCe-iN-Z7f" id="mAo-Ds-Kz5"/>
                         <outlet property="singleChoiceForm" destination="4hi-xZ-dPt" id="ZSk-0Q-cwV"/>
+                        <outlet property="submitQuestionButton" destination="S1N-zS-6tK" id="ol8-Zr-tUm"/>
                         <outletCollection property="choiceControls" destination="4hi-xZ-dPt" collectionClass="NSMutableArray" id="Ftt-gG-LqI"/>
                         <outletCollection property="choiceControls" destination="Bze-Zl-egU" collectionClass="NSMutableArray" id="qoL-Hh-jve"/>
                         <outletCollection property="choiceControls" destination="ixA-z0-9HS" collectionClass="NSMutableArray" id="89l-Rc-pIz"/>
