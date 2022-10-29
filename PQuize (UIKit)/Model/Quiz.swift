@@ -84,7 +84,7 @@ struct Quiz {
         }
         
         // Return the piece with maximum votes.
-        let sortedCandidates = candidates.sorted { $0.value > $1.value }
+        let sortedCandidates = candidates.sorted { $0.value > $1.value && $0.key.name < $1.key.name }
         return sortedCandidates.first?.key
     }
     
