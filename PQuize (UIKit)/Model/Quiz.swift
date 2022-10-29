@@ -50,7 +50,7 @@ struct Quiz {
                  ]),
     ]
     
-
+    
     var finishTitle: String {
         guard let result = calculatedResult
         else { return "У вас что-то непонятное" }
@@ -66,7 +66,7 @@ struct Quiz {
     }
     
     
-
+    
     // MARK: - Service
     
     private var calculatedResult: Piece? {
@@ -84,7 +84,13 @@ struct Quiz {
         }
         
         // Return the piece with maximum votes.
-        let sortedCandidates = candidates.sorted { $0.value > $1.value && $0.key.name < $1.key.name }
+        let sortedCandidates = candidates.sorted {
+            if $0.value == $1.value {
+                return $0.key.name < $1.key.name
+            } else {
+                return $0.value > $1.value
+            }
+        }
         return sortedCandidates.first?.key
     }
     
@@ -110,6 +116,6 @@ struct Quiz {
         }
     }
     
-
+    
     
 }

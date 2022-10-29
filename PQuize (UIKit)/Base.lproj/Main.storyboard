@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -86,7 +87,7 @@
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleColor" name="ChoiceControl"/>
                                         </state>
                                         <connections>
                                             <action selector="singleChoiceButtonPressed:" destination="c9h-ST-fHR" eventType="touchUpInside" id="cc6-Zo-TEO"/>
@@ -98,7 +99,7 @@
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleColor" name="ChoiceControl"/>
                                         </state>
                                         <connections>
                                             <action selector="singleChoiceButtonPressed:" destination="c9h-ST-fHR" eventType="touchUpInside" id="I4i-Sc-feB"/>
@@ -110,7 +111,7 @@
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleColor" name="ChoiceControl"/>
                                         </state>
                                         <connections>
                                             <action selector="singleChoiceButtonPressed:" destination="c9h-ST-fHR" eventType="touchUpInside" id="Jgv-YF-57y"/>
@@ -122,7 +123,7 @@
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleColor" name="ChoiceControl"/>
                                         </state>
                                         <connections>
                                             <action selector="singleChoiceButtonPressed:" destination="c9h-ST-fHR" eventType="touchUpInside" id="8b6-PK-QeJ"/>
@@ -144,7 +145,7 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nXR-C7-9Od">
                                                 <rect key="frame" x="325" y="0.0" width="51" height="31"/>
-                                                <color key="onTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="onTintColor" name="ChoiceControl"/>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -159,7 +160,7 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rQB-ZP-GYD">
                                                 <rect key="frame" x="325" y="0.0" width="51" height="31"/>
-                                                <color key="onTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="onTintColor" name="ChoiceControl"/>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -174,7 +175,7 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Yvb-Mg-1rV">
                                                 <rect key="frame" x="325" y="0.0" width="51" height="31"/>
-                                                <color key="onTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="onTintColor" name="ChoiceControl"/>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -189,7 +190,7 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MJU-1i-wdo">
                                                 <rect key="frame" x="325" y="0.0" width="51" height="31"/>
-                                                <color key="onTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="onTintColor" name="ChoiceControl"/>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -227,6 +228,7 @@
                                     </stackView>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="gp5-L2-IuP">
                                         <rect key="frame" x="-2" y="23.5" width="378" height="31"/>
+                                        <color key="tintColor" name="ChoiceControl"/>
                                     </slider>
                                 </subviews>
                                 <constraints>
@@ -263,7 +265,7 @@
                                             <segment title="Second"/>
                                         </segments>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="selectedSegmentTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="selectedSegmentTintColor" name="ChoiceControl"/>
                                     </segmentedControl>
                                 </subviews>
                                 <constraints>
@@ -417,6 +419,9 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="ChoiceControl">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

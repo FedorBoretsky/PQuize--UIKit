@@ -199,6 +199,10 @@ class QuestionsViewController: UIViewController
         case .segmentedChoice:  saveSegmentedResponse()
         }
         currentQuestionIndex += 1
+        
+        // TODO: - Delete PRINT
+//        printQuiz(quiz)
+
     }
     
     @IBSegueAction func gotoResultAction(_ coder: NSCoder) -> ResultViewController? {
