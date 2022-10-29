@@ -9,6 +9,7 @@ import UIKit
 
 class ResultViewController: UIViewController {
 
+    @IBOutlet weak var resultImage: UIImageView!
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
@@ -30,6 +31,7 @@ class ResultViewController: UIViewController {
     }
     
     func displayResult() {
+        resultImage.image = UIImage(named: quiz.finishImageName)
         resultLabel.text = quiz.finishTitle
         descriptionLabel.text = quiz.finishDescription
     }

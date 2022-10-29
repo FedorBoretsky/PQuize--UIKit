@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "welcome.png",
+      "filename" : "bishop.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "bishop@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "bishop@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -13,7 +13,7 @@ struct Quiz {
     
     // MARK: - Content of the Quiz.
     
-    let startTitle = "Какая у меня фигура, тренер?"
+    let startTitle = "Тренер, какая у меня фигура?"
     
     var questions: [Question] = [
         Question(text: "Много ли вы едите?",
@@ -65,7 +65,12 @@ struct Quiz {
         return result.description
     }
     
-    
+    var finishImageName: String {
+        guard let result = calculatedResult
+        else { return "" }
+        
+        return result.rawValue
+    }
     
     // MARK: - Service
     
